@@ -1,0 +1,19 @@
+button{
+    background-color: #486581;
+    width: 50%;
+    height: 3em;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+button:hover{
+    background-color: cornflowerblue;
+} 
+
+.selected{
+    background-color: teal;
+}

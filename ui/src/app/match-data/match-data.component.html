@@ -1,0 +1,39 @@
+<div></div>
+
+<table>
+  <thead>
+      <tr>
+        <th>Match History</th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let match of matchList">
+
+      <td> 
+        <div id="teamNames">
+          <div class="teamName"> {{match.teamOne}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
+          <div id="vs"> v </div> 
+          <div class="teamName"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{match.teamTwo}} </div>
+        </div>
+        <div id="score"> {{match.teamOneGoals + " - " + match.teamTwoGoals}} </div>
+        <div id="date"> {{"played on: " + match.date.day + "/" + match.date.month + "/" + match.date.year}} </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+
+<label> Date </label>
+
+<input type="text" id="day" placeholder="Day">
+<input type="text" id="month" placeholder="Month">
+<input type="text" id="year" placeholder="Year">
+
+<button (click)="search()"> Search </button>
+
+<button (click)="clear()"> Clear </button>
+
+<button (click)="generateMatch()"> Generate </button>
+
+</div>

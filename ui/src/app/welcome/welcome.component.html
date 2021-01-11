@@ -1,0 +1,12 @@
+<div>
+  <button (click)="onTabClick(1)" *ngIf="tabIndex===0 || tabIndex ===2">Club Details</button>
+  <button *ngIf="tabIndex===1" class="selected">Club Details</button>
+
+  <button (click)="onTabClick(2)" *ngIf="tabIndex===0 || tabIndex ===1">Match History</button>
+  <button *ngIf="tabIndex===2" class="selected">Match History</button>
+</div>
+
+<div>
+  <app-table  *ngIf="tabIndex === 1"></app-table>
+  <app-match-data  *ngIf="tabIndex === 2"></app-match-data>
+</div>
